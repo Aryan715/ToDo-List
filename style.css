@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Alegreya', serif;
+    font-family: 'Manrope', sans-serif;
+    background-image: linear-gradient(120deg, #136FC3, #76EF66);
+    color: white;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+    font-family: 'Alegreya', serif;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-family: 'Manrope', sans-serif; 
+    font-family: initial; 
+    
+
+}
+
+
+header, 
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, 
+form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+
+}
+
+/* .todo-button{
+    margin: 10px;
+} */
+
+.item{
+    width: 37px;
+    height: 37px;
+    pointer-events: none;
+}
+
+form button{
+color: #76EF66;
+background: white;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #76EF66;
+    color: white;
+}
+
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    list-style: none;
+    min-width: 30%;
+}
+
+.todo{
+    margin: 0.5em;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+
+}
+
+.todo li{
+    flex: 1;
+}
+
+.complete-btn, .trash-btn{
+    
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn:hover{
+background: #6faae0;
+}
+
+.trash-btn:hover{
+    background: #69f759;
+}
+
+
+.todo-item{
+    padding: 0rem 0.5rem;
+
+}
+
+.completed{
+    /* text-decoration: line-through; */
+    opacity: 0.4;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #ff6f47;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #ff6f47;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: #ff6f47;
+}
